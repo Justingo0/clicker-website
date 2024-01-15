@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Button Clicker by FrioTech(JB)</title>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!--Set Text-->
+        <script>
+            var clicks = 0;
+            var clickstoget = 1;
+            var purchase1cost = 40;
+            var purchase2cost = 120;
+            var purchase3cost = 300;
+            var purchase4cost = 560;
+            var purchase5cost = 700;
+            var purchase6cost = 1050;
+            var purchase7cost = 1850;
+            var purchase8cost = 2500;
+            var purchase9cost = 3200;
+            var purchase10cost = 6000;
+            var purchase11cost = 8000;
+            var purchase12cost = 15000;
+            var purchase13cost = 21000;
+            var purchase14cost = 30000;
+            var purchase15cost = 45000;
+            var purchase16cost = 65000;
+            var purchase17cost = 80000;
+            var purchase18cost = 95000;
+            var purchase19cost = 120000;
+            var purchase20cost = 700000;
+            var purchase21cost = 1000000;
+            var money_sound = new Audio('audio//cashier-quotka-chingquot-sound-effect-129698.mp3')
+
+            function SaveData(){
+                localStorage.setItem("clicks", clicks);
+                localStorage.setItem("ctg", clickstoget);
+                localStorage.setItem('p1', purchase1cost);
+                localStorage.setItem('p2', purchase2cost);
+                localStorage.setItem('p3', purchase3cost);
+                localStorage.setItem('p4', purchase4cost);
+                localStorage.setItem('p5', purchase5cost);
+                localStorage.setItem('p6', purchase6cost);
+                localStorage.setItem('p7', purchase7cost);
+                localStorage.setItem('p8', purchase8cost);
+                localStorage.setItem('p9', purchase9cost);
+                localStorage.setItem('p10', purchase10cost);
+                localStorage.setItem('p11', purchase11cost);
+                localStorage.setItem('p12', purchase12cost);
+                localStorage.setItem('p13', purchase13cost);
+                localStorage.setItem('p14', purchase14cost);
+                localStorage.setItem('p15', purchase15cost);
+                localStorage.setItem('p16', purchase16cost);
+                localStorage.setItem('p17', purchase17cost);
+                localStorage.setItem('p18', purchase18cost);
+                localStorage.setItem('p19', purchase19cost);
+                localStorage.setItem('p20', purchase20cost);
+                localStorage.setItem('p21', purchase21cost);
+            }
+
+            function GetSave(){
+                if(localStorage.getItem('p1') != null){
+                    clicks = parseInt(localStorage.getItem("clicks"));
+                    clickstoget = parseInt(localStorage.getItem("ctg"));
+                    purchase1cost = parseInt(localStorage.getItem('p1'));
+                    purchase2cost = parseInt(localStorage.getItem('p2'));
+                    purchase3cost = parseInt(localStorage.getItem('p3'));
+                    purchase4cost = parseInt(localStorage.getItem('p4'));
+                    purchase5cost = parseInt(localStorage.getItem('p5'));
+                    purchase6cost = parseInt(localStorage.getItem('p6'));
+                    purchase7cost = parseInt(localStorage.getItem('p7'));
+                    purchase8cost = parseInt(localStorage.getItem('p8'));
+                    purchase9cost = parseInt(localStorage.getItem('p9'));
+                    purchase10cost = parseInt(localStorage.getItem('p10'));
+                    purchase11cost = parseInt(localStorage.getItem('p11'));
+                    purchase12cost = parseInt(localStorage.getItem('p12'));
+                    purchase13cost = parseInt(localStorage.getItem('p13'));
+                    purchase14cost = parseInt(localStorage.getItem('p14'));
+                    purchase15cost = parseInt(localStorage.getItem('p15'));
+                    purchase16cost = parseInt(localStorage.getItem('p16'));
+                    purchase17cost = parseInt(localStorage.getItem('p17'));
+                    purchase18cost = parseInt(localStorage.getItem('p18'));
+                    purchase19cost = parseInt(localStorage.getItem('p19'));
+                    purchase20cost = parseInt(localStorage.getItem('p20'));
+                    purchase21cost = parseInt(localStorage.getItem('p21'));
+                    SetAllText();
+                }
+            }
+
+            function ClearSave(){
+                localStorage.clear();
+                var clicks = 0;
+                var clickstoget = 1;
+                var purchase1cost = 40;
+                var purchase2cost = 120;
+                var purchase3cost = 300;
+                var purchase4cost = 560;
+                var purchase5cost = 700;
+                var purchase6cost = 1050;
+                var purchase7cost = 1850;
+                var purchase8cost = 2500;
+                var purchase9cost = 3200;
+                var purchase10cost = 6000;
+                var purchase11cost = 8000;
+                var purchase12cost = 15000;
+                var purchase13cost = 21000;
+                var purchase14cost = 30000;
+                var purchase15cost = 45000;
+                var purchase16cost = 65000;
+                var purchase17cost = 80000;
+                var purchase18cost = 95000;
+                var purchase19cost = 120000;
+                var purchase20cost = 700000;
+                var purchase21cost = 1000000;
+                SetAllText();
+            }
+
+            function SetAllText() {
+              document.getElementById("clickvalue").innerHTML = clicks.toString();
+              document.getElementById("clickvaluetoget").innerHTML = clickstoget.toString();
+              document.getElementById("purchase1text").innerHTML = purchase1cost.toString();
+              document.getElementById("purchase2text").innerHTML = purchase2cost.toString();
+              document.getElementById("purchase3text").innerHTML = purchase3cost.toString();
+              document.getElementById("purchase4text").innerHTML = purchase4cost.toString();
+              document.getElementById("purchase5text").innerHTML = purchase5cost.toString();
+              document.getElementById("purchase6text").innerHTML = purchase6cost.toString();
+              document.getElementById("purchase7text").innerHTML = purchase7cost.toString();
+              document.getElementById("purchase8text").innerHTML = purchase8cost.toString();
+              document.getElementById("purchase9text").innerHTML = purchase9cost.toString();
+              document.getElementById("purchase10text").innerHTML = purchase10cost.toString();
+              document.getElementById("purchase11text").innerHTML = purchase11cost.toString();
+              document.getElementById("purchase12text").innerHTML = purchase12cost.toString();
+              document.getElementById("purchase13text").innerHTML = purchase13cost.toString();
+              document.getElementById("purchase14text").innerHTML = purchase14cost.toString();
+              document.getElementById("purchase15text").innerHTML = purchase15cost.toString();
+              document.getElementById("purchase16text").innerHTML = purchase16cost.toString();
+              document.getElementById("purchase17text").innerHTML = purchase17cost.toString();
+              document.getElementById("purchase18text").innerHTML = purchase18cost.toString();
+              document.getElementById("purchase19text").innerHTML = purchase19cost.toString();
+              document.getElementById("purchase20text").innerHTML = purchase20cost.toString();
+              document.getElementById("purchase21text").innerHTML = purchase21cost.toString();
+            }
+            function Increase(){
+                clicks += clickstoget;
+                SetAllText();
+                SaveData();
+            }
+            function MoreClicks(howmany){
+                clickstoget += howmany;
+                SaveData();
+            }
+            function Purchase1(){
+                if (clicks > purchase1cost || clicks == purchase1cost) {
+                    MoreClicks(1);
+                    clicks -= purchase1cost;
+                    purchase1cost += 40;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase2(){
+                if (clicks > purchase2cost || clicks == purchase2cost) {
+                    MoreClicks(5);
+                    clicks -= purchase2cost;
+                    purchase2cost += 120;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase3(){
+                if (clicks > purchase3cost || clicks == purchase3cost) {
+                    MoreClicks(15);
+                    clicks -= purchase3cost;
+                    purchase3cost += 300;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase4(){
+                if (clicks > purchase4cost || clicks == purchase4cost) {
+                    MoreClicks(30);
+                    clicks -= purchase4cost;
+                    money_sound.play();
+                    purchase4cost += 560;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase5(){
+                if (clicks > purchase5cost || clicks == purchase5cost) {
+                    MoreClicks(100);
+                    clicks -= purchase5cost;
+                    money_sound.play();
+                    purchase5cost += 700;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase6(){
+                if (clicks > purchase6cost || clicks == purchase6cost) { 
+                    MoreClicks(175);
+                    clicks -= purchase6cost;
+                    money_sound.play();
+                    purchase6cost += 1050;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase7(){
+                if (clicks > purchase7cost || clicks == purchase7cost) {
+                    MoreClicks(300);
+                    clicks -= purchase7cost;
+                    money_sound.play();
+                    purchase7cost += 1850;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase8(){
+                if (clicks > purchase8cost || clicks == purchase8cost) {
+                    MoreClicks(400);
+                    clicks -= purchase8cost;
+                    money_sound.play();
+                    purchase8cost += 2500;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase9(){
+                if (clicks > purchase9cost || clicks == purchase9cost) {
+                    MoreClicks(575);
+                    clicks -= purchase9cost;
+                    money_sound.play();
+                    purchase9cost += 3200;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase10(){
+                if (clicks > purchase10cost || clicks == purchase10cost) {
+                    MoreClicks(1000);
+                    clicks -= purchase10cost;
+                    money_sound.play();
+                    purchase10cost += 6000;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase11(){
+                if (clicks > purchase11cost || clicks == purchase11cost) {
+                    MoreClicks(1500);
+                    clicks -= purchase1cost;
+                    money_sound.play();
+                    purchase11cost += 8000;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase12(){
+                if (clicks > purchase12cost || clicks == purchase12cost) {
+                    MoreClicks(2500);
+                    clicks -= purchase12cost;
+                    money_sound.play();
+                    purchase12cost += 15000;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase13(){
+                if (clicks > purchase13cost || clicks == purchase13cost) {
+                    MoreClicks(3300);
+                    clicks -= purchase13cost;
+                    money_sound.play();
+                    purchase13cost += 21000;
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase14(){
+                if (clicks > purchase14cost || clicks == purchase14cost) {
+                    MoreClicks(4700);
+                    clicks -= purchase14cost;
+                    purchase14cost += 30000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase15(){
+                if (clicks > purchase15cost || clicks == purchase15cost) {
+                    MoreClicks(5200);
+                    clicks -= purchase15cost;
+                    purchase15cost += 45000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase16(){
+                if (clicks > purchase16cost || clicks == purchase16cost) { 
+                    MoreClicks(6000);
+                    clicks -= purchase16cost;
+                    purchase16cost += 65000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase17(){
+                if (clicks > purchase17cost || clicks == purchase17cost) {
+                    MoreClicks(7200);
+                    clicks -= purchase17cost;
+                    purchase17cost += 80000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase18(){
+                if (clicks > purchase18cost || clicks == purchase18cost) {
+                    MoreClicks(8400);
+                    clicks -= purchase18cost;
+                    purchase18cost += 95000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase19(){
+                if (clicks > purchase19cost || clicks == purchase19cost) {
+                    MoreClicks(9500);
+                    clicks -= purchase19cost;
+                    purchase19cost += 120000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase20(){
+                if (clicks > purchase20cost || clicks == purchase20cost) {
+                    MoreClicks(10000);
+                    clicks -= purchase20cost;
+                    purchase20cost += 700000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+            function Purchase21(){
+                if (clicks > purchase21cost || clicks == purchase21cost) {
+                    MoreClicks(15000);
+                    clicks -= purchase21cost;
+                    purchase21cost += 1000000;
+                    money_sound.play();
+                    SetAllText();
+                    SaveData();
+                }
+            }
+          </script>
+    </head>
+    <body onload="GetSave()">
+        <button class="clear" onclick="ClearSave()"> Clear Data: Refresh when Clicked </button>
+        <h1 class="h1 toptext"> Clicker Game </h1>
+        <button class="button clicker" onclick="Increase()">+<span id="clickvaluetoget"></span> </button>
+        <h1 class="h1 clicktext"> Clicks: </h1>
+        <h1 class="h1 clickvalue"><span id="clickvalue"></span></h1>
+        <h1 class="h1 pruchasetext"> Purchases </h1>
+        <button class="purchase1button" onclick="Purchase1()">Clicks: <span id="purchase1text"></span></button>
+        <button class="purchase2button" onclick="Purchase2()">Clicks: <span id="purchase2text"></span></button><br>
+        <button class="purchase3button" onclick="Purchase3()">Clicks: <span id="purchase3text"></span></button>
+        <button class="purchase4button" onclick="Purchase4()">Clicks: <span id="purchase4text"></span></button><br>
+        <button class="purchase5button" onclick="Purchase5()">Clicks: <span id="purchase5text"></span></button>
+        <button class="purchase6button" onclick="Purchase6()">Clicks: <span id="purchase6text"></span></button><br>
+        <button class="purchase7button" onclick="Purchase7()">Clicks: <span id="purchase7text"></span></button>
+        <button class="purchase8button" onclick="Purchase8()">Clicks: <span id="purchase8text"></span></button><br>
+        <button class="purchase9button" onclick="Purchase9()">Clicks: <span id="purchase9text"></span></button>
+        <button class="purchase10button" onclick="Purchase10()">Clicks: <span id="purchase10text"></span></button><br>
+        <button class="purchase11button" onclick="Purchase11()">Clicks: <span id="purchase11text"></span></button>
+        <button class="purchase12button" onclick="Purchase12()">Clicks: <span id="purchase12text"></span></button><br>
+        <button class="purchase13button" onclick="Purchase13()">Clicks: <span id="purchase13text"></span></button>
+        <button class="purchase14button" onclick="Purchase14()">Clicks: <span id="purchase14text"></span></button><br>
+        <button class="purchase15button" onclick="Purchase15()">Clicks: <span id="purchase15text"></span></button>
+        <button class="purchase16button" onclick="Purchase16()">Clicks: <span id="purchase16text"></span></button><br>
+        <button class="purchase17button" onclick="Purchase17()">Clicks: <span id="purchase17text"></span></button>
+        <button class="purchase18button" onclick="Purchase18()">Clicks: <span id="purchase18text"></span></button><br>
+        <button class="purchase19button" onclick="Purchase19()">Clicks: <span id="purchase19text"></span></button>
+        <button class="purchase20button" onclick="Purchase20()">Clicks: <span id="purchase20text"></span></button><br>
+        <button class="purchase21button" onclick="Purchase21()">Clicks: <span id="purchase21text"></span></button>
+    </body>
+</html>

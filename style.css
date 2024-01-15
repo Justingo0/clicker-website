@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.clear{
+    margin: 20px 30px;
+}
+
+.toptext{
+    margin: 0px 30px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.clicker{
+    width: 220px;
+    height: 150px;
+    font-size: xx-large;
+    font-weight:600;
+    overflow: hidden;
+    margin: 10px 30px;
+    cursor: pointer;
+}
+
+.clicktext{
+    margin: 10px 30px;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.pruchasetext{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.clickvalue{
+    margin: 0px 30px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.purchase1button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    cursor: pointer;
+    height: 70px; 
+}
+
+.purchase2button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    cursor: pointer;
+    height: 70px; 
+}
+.purchase3button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px;
+    cursor: pointer; 
+}
+.purchase4button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase5button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase6button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase7button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase8button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase9button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase10button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase11button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+
+.purchase12button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase13button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase14button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase15button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+}
+.purchase16button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase17button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase18button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase19button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px; 
+    cursor: pointer;
+}
+.purchase20button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+}
+.purchase21button{
+    margin: 15px 30px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 250px;
+    height: 70px;
+    background-color: aquamarine;
+    cursor: pointer;
+}
